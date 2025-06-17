@@ -10,14 +10,14 @@ section {
   height: 100vh;
   padding-top: 100px;
   text-align: center;
-  background: linear-gradient(to bottom right, #f0f8ff, #e6f0ff);
+  background: linear-gradient(to bottom right, #a9a9a9, #636363);
 }
 
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, #0056b3, #007BFF);
+  background: linear-gradient(to right, #000000, #192186);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,8 +28,8 @@ section {
 }
 
 #navbar.scrolled {
-  background: #003f88;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  background: #0f083b;
+  box-shadow: 0 3px 12px rgba(15, 13, 41, 0.2);
 }
 
 .logo {
