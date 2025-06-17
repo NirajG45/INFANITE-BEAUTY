@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interactive Navigation Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Navigation Menu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav id="navbar">
-    <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+    <div class="logo">MySite</div>
+    <ul class="menu" id="menu">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </nav>
 
-  <main>
-    <section style="height: 1200px; padding-top: 80px;">
-      <h1>Scroll Down to See the Effect</h1>
-      <p>Hover over the menu items to change color.</p>
-    </section>
-  </main>
+  <section id="home">
+    <h1>Welcome to MySite</h1>
+  </section>
+  <section id="about">
+    <h1>About Us</h1>
+  </section>
+  <section id="services">
+    <h1>Our Services</h1>
+  </section>
+  <section id="contact">
+    <h1>Contact Us</h1>
+  </section>
 
   <script src="script.js"></script>
 </body>
