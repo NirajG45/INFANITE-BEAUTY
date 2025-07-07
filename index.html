@@ -3,36 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Enhanced Navigation Menu</title>
+  <title>EduHub - Learn Programming</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">MySite</div>
-            <ul class="menu" id="menu">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">EduHub</div>
+      <ul class="menu" id="menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+        <li><a href="#courses" class="nav-link">Courses</a></li>
+        <li><a href="#practice" class="nav-link">Practice</a></li>
+        <li><a href="#articles" class="nav-link">Articles</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
 
-  <section id="home">
-    <h1>Welcome to MySite</h1>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Learn. Practice. Succeed.</h1>
+    <p>Start your coding journey with structured tutorials and hands-on practice.</p>
+    <input type="text" placeholder="Search tutorials...">
+    <button class="btn-primary">Search</button>
   </section>
-  <section id="about">
-    <h1>About Us</h1>
+
+  <!-- Tutorials Section -->
+  <section id="tutorials">
+    <h2>Programming Tutorials</h2>
+    <div class="card-container">
+      <div class="card">C++</div>
+      <div class="card">Python</div>
+      <div class="card">Java</div>
+      <div class="card">Web Development</div>
+      <div class="card">Data Structures</div>
+    </div>
   </section>
-  <section id="services">
-    <h1>Our Services</h1>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="card-container">
+      <div class="card course-card">DSA Mastery</div>
+      <div class="card course-card">System Design</div>
+      <div class="card course-card">Frontend Dev</div>
+    </div>
   </section>
+
+  <!-- Coding Practice -->
+  <section id="practice">
+    <h2>Practice Coding</h2>
+    <p>Sharpen your skills with coding challenges and contests.</p>
+    <button class="btn-primary">Start Practicing</button>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles">
+    <h2>Latest Articles</h2>
+    <div class="card-container">
+      <div class="card">How to crack coding interviews?</div>
+      <div class="card">5 Dynamic Programming Tricks</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
-    <h1>Contact Us</h1>
+    <h2>Contact Us</h2>
+    <p>Need help? Reach out at <strong>support@eduhub.com</strong></p>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EduHub. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
