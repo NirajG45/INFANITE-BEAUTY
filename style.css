@@ -300,3 +300,98 @@ body.light-mode {
   background: #000;
   color: #fff;
 }
+.dark-mode .course-card {
+  background-color: #e8f0fe;
+  color: #1a237e;
+}
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    }
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+/* Dark Mode Toggle Icon */
+.dark-mode-toggle i {
+    font-size: 20px;
+    color: white;
+}   
+/* Dark Mode Toggle Animation */
+.dark-mode-toggle {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+/* Dark Mode Toggle Active State */
+.dark-mode-toggle.active {
+    background-color: #333;
+}
+.dark-mode-toggle.active i {
+    color: #e0e0e0;
+}
+/* Dark Mode Toggle Icon */
+.dark-mode-toggle i {
+    transition: color 0.3s ease;
+}
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}
+/* Dark Mode Toggle Icon for Dark Mode */
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+/* Dark Mode Toggle Icon for Dark Mode */
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+/* Dark Mode Toggle Icon for Dark Mode */
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+
+/* Dark Mode Toggle Icon for Dark Mode */
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}   
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
+/* Dark Mode Toggle Icon for Dark Mode */
+.dark-mode-toggle i.dark-mode-icon {
+    color: #e0e0e0;
+}
+/* Dark Mode Toggle Icon for Light Mode */
+.dark-mode-toggle i.light-mode-icon {
+    color: #007BFF;
+}
