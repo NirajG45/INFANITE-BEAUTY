@@ -3,135 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EduHub - Learn Programming</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Glow Beauty Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <div class="logo">EduHub</div>
-      <ul class="menu" id="menu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
-        <li><a href="#courses" class="nav-link">Courses</a></li>
-        <li><a href="#practice" class="nav-link">Practice</a></li>
-        <li><a href="#articles" class="nav-link">Articles</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </div>
+  <header>
+    <h1>Glow Beauty Store</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a href="#order">Order Now</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Learn. Practice. Succeed.</h1>
-    <p>Start your coding journey with structured tutorials and hands-on practice.</p>
-    <input type="text" placeholder="Search tutorials...">
-    <button class="btn-primary">Search</button>
-  </section>
+  <div class="hero" id="home">
+    <h2>Glow Up with Premium Beauty Essentials ✨</h2>
+  </div>
 
-  <!-- Tutorials Section -->
-  <section id="tutorials">
-    <h2>Programming Tutorials</h2>
-    <div class="card-container">
+  <!-- Products -->
+  <section id="products">
+    <h2>🌸 Featured Products</h2>
+    <div class="grid">
       <div class="card">
-        <h3>C++</h3>
-        <p>C++ is a powerful general-purpose programming language used for systems/software development and game development. It supports OOP, low-level memory manipulation, and is highly efficient.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/2738/2738893.png">
+        <h3>Bridal Kit</h3>
+        <p>Perfect for the big day. Includes full HD makeup products.</p>
       </div>
       <div class="card">
-        <h3>Python</h3>
-        <p>Python is an interpreted, high-level, dynamically typed language famous for its readability and broad library support. Ideal for web development, automation, data science, and machine learning.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+        <h3>Hair Care Set</h3>
+        <p>Shampoo, conditioner, serum — your complete hair solution.</p>
       </div>
       <div class="card">
-        <h3>Java</h3>
-        <p>Java is a class-based, object-oriented language designed to have as few implementation dependencies as possible. It is widely used in enterprise applications and Android development.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png">
+        <h3>Herbal Facial Kit</h3>
+        <p>Organic ingredients for instant glow and detox.</p>
       </div>
       <div class="card">
-        <h3>Web Development</h3>
-        <p>Web development includes HTML, CSS, and JavaScript to build interactive websites. Backend development involves technologies like Node.js, PHP, and databases like MySQL and MongoDB.</p>
-      </div>
-      <div class="card">
-        <h3>Data Structures</h3>
-        <p>Data Structures organize and store data efficiently. Includes arrays, linked lists, stacks, queues, trees, and graphs — crucial for building efficient algorithms and acing technical interviews.</p>
-      </div>
-      <div class="card">
-        <h3>JavaScript</h3>
-        <p>JavaScript is the language of the web. It enables dynamic and interactive features in websites. Modern frameworks like React, Vue, and Angular are built on JavaScript.</p>
-      </div>
-      <div class="card">
-        <h3>SQL</h3>
-        <p>SQL (Structured Query Language) is used for managing and querying relational databases like MySQL, PostgreSQL, and SQLite. It helps in inserting, updating, and retrieving data efficiently.</p>
-      </div>
-      <div class="card">
-        <h3>DSA (Data Structures & Algorithms)</h3>
-        <p>DSA is essential for problem-solving in programming. Covers time complexity, recursion, searching, sorting, dynamic programming, and graph algorithms.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/4376/4376621.png">
+        <h3>Nail Art Pack</h3>
+        <p>Trendy nail polish, stickers, and accessories.</p>
       </div>
     </div>
   </section>
-    <!-- Tutorials Section -->
-    <section id="tutorials">
-    <h2>Programming Tutorials</h2>
-    <div class="card-container">
-      <div class="card">C++</div>
-      <div class="card">Python</div>
-      <div class="card">Java</div>
-      <div class="card">Web Development</div>
-      <div class="card">Data Structures</div>
-      <div class="card">JavaScript</div>
-      <div class="card">SQL</div>
-      <div class="card">DSA (Data Structures & Algorithms)</div>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <h2>💖 Style Inspiration</h2>
+    <div class="grid">
+      <img src="https://i.pinimg.com/736x/5d/19/84/5d198489178db7b1177ad8a3dee8b8f1.jpg" alt="Bridal Look">
+      <img src="https://img.freepik.com/free-photo/beautician-applies-white-mask-face.jpg?w=740" alt="Facial">
+      <img src="https://img.freepik.com/premium-photo/procedure-pedicure.jpg" alt="Pedicure">
+      <img src="https://i.pinimg.com/736x/e2/9a/25/e29a253f18b5cadde42a06494fd5b636.jpg" alt="Hair Style">
     </div>
   </section>
 
-  <!-- Courses Section -->
-  <section id="courses">
-    <h2>Courses</h2>
-    <div class="card-container">
-      <div class="card course-card">DSA Mastery</div>
-      <div class="card course-card">System Design</div>
-      <div class="card course-card">Frontend Dev</div>
-    </div>
+  <!-- Order Section -->
+  <section id="order">
+    <h2>🛒 Place Your Order</h2>
+    <form onsubmit="confirmOrder(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select required>
+        <option value="">Select Product</option>
+        <option value="bridal-kit">Bridal Kit</option>
+        <option value="hair">Hair Care</option>
+        <option value="facial">Facial Kit</option>
+        <option value="nails">Nail Art</option>
+      </select>
+      <button type="submit">Place Order</button>
+      <p id="order-status" style="color:lightgreen; font-weight:bold;"></p>
+    </form>
   </section>
 
-  <!-- Coding Practice -->
-  <section id="practice">
-    <h2>Practice Coding</h2>
-    <p>Sharpen your skills with coding challenges and contests.</p>
-    <button class="btn-primary">Start Practicing</button>
-  </section>
-
-  <!-- Articles Section -->
-  <section id="articles">
-    <h2>Latest Articles</h2>
-    <div class="card-container">
-      <div class="card">How to crack coding interviews?</div>
-      <div class="card">5 Dynamic Programming Tricks</div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Need help? Reach out at <strong>support@eduhub.com</strong></p>
+    <h2>📞 Contact Us</h2>
+    <p>📍 123 Beauty Street, Glam City</p>
+    <p>📧 hello@glowbeauty.com</p>
+    <p>📸 <a href="https://www.instagram.com/anshika_herbalbeautyparlour/" target="_blank" style="color:#ff69b4;">Follow on Instagram</a></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
   </section>
 
-  <!-- Newsletter Section -->
-  <section class="newsletter">
-    <h2>Subscribe to our Newsletter</h2>
-    <input type="email" placeholder="Enter your email">
-    <button class="btn-primary">Subscribe</button>
-  </section>
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="btn-secondary">Back to Top</button>
-    
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 EduHub. All rights reserved.</p>
+    &copy; 2025 Glow Beauty Store — All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
