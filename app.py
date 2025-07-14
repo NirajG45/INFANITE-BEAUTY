@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, redirect, flash, session, url_for
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
+app.secret_key = "your_secret_key"  # Keep it secret in production
 
-# --- Initialize SQLite DB ---
+# ---------- DB Setup ----------
 def init_db():
     conn = sqlite3.connect("database.db")
     cur = conn.cursor()
@@ -22,12 +22,11 @@ def init_db():
 
 init_db()
 
-# --- Home Route ---
+# ---------- Routes ----------
 @app.route('/')
 def home():
-    return render_template("index.html")  # Full updated template with all sections
+    return render_template("index.html")
 
-# --- Order Booking Handler ---
 @app.route('/book', methods=['POST'])
 def book():
     name = request.form.get('name')
@@ -43,14 +42,40 @@ def book():
         conn.commit()
         conn.close()
         flash("✅ Booking successful! We'll contact you soon.")
-        return redirect('/')
     else:
         flash("❌ Please fill in all fields.")
-        return redirect('/')
+    return redirect('/')
 
-# --- Admin View to See All Bookings ---
+# ---------- Admin Login ----------
+@app.route('/admin/login', methods=['GET', 'POST'])
+def admin_login():
+    if request.method == 'POST':
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        if username == "admin" and password == "admin123":
+            session['admin'] = True
+            return redirect('/admin')
+        else:
+            flash("❌ Invalid credentials. Try again.")
+            return redirect('/admin/login')
+
+    return render_template("admin_login.html")
+
+# ---------- Admin Logout ----------
+@app.route('/admin/logout')
+def admin_logout():
+    session.pop('admin', None)
+    flash("👋 You have been logged out.")
+    return redirect('/admin/login')
+
+# ---------- Admin Dashboard ----------
 @app.route('/admin')
 def admin():
+    if not session.get('admin'):
+        flash("🔒 Please login to access admin dashboard.")
+        return redirect('/admin/login')
+
     conn = sqlite3.connect("database.db")
     cur = conn.cursor()
     cur.execute("SELECT * FROM bookings")
@@ -58,6 +83,6 @@ def admin():
     conn.close()
     return render_template("admin.html", bookings=rows)
 
-# --- Run App ---
+# ---------- Run App ----------
 if __name__ == '__main__':
     app.run(debug=True)
