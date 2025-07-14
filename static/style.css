@@ -1,1 +1,141 @@
-body { background: #111; color: white; font-family: sans-serif; }
+/* Base Setup */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+header {
+  background-color: #ff69b4;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  color: #000;
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px;
+}
+nav a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?makeup,cosmetics') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h2 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+h2 {
+  color: #ff69b4;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Product & Gallery Cards */
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+}
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, select, textarea, button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+button {
+  background: #ff69b4;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #ff69b4;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Map */
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero h2 {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+}
