@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glow Beauty Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>Infanite Beauty Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Segoe+UI&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -17,7 +16,9 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
+    <a href="#benefits">Why Us</a>
     <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
     <a href="#order">Order Now</a>
   </nav>
@@ -32,24 +33,47 @@
     <h2>🌸 Featured Products</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2738/2738893.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/2738/2738893.png" alt="Bridal Kit">
         <h3>Bridal Kit</h3>
         <p>Perfect for the big day. Includes full HD makeup products.</p>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Hair Care">
         <h3>Hair Care Set</h3>
         <p>Shampoo, conditioner, serum — your complete hair solution.</p>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png" alt="Facial Kit">
         <h3>Herbal Facial Kit</h3>
         <p>Organic ingredients for instant glow and detox.</p>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4376/4376621.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/4376/4376621.png" alt="Nail Art">
         <h3>Nail Art Pack</h3>
         <p>Trendy nail polish, stickers, and accessories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="benefits">
+    <h2>🌺 Why Choose Infanite Beauty?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>100% Herbal Products</h3>
+        <p>We only use natural and organic ingredients to protect your skin.</p>
+      </div>
+      <div class="card">
+        <h3>Certified Experts</h3>
+        <p>Our team is certified in beauty and skincare, ensuring safe treatment.</p>
+      </div>
+      <div class="card">
+        <h3>Affordable Packages</h3>
+        <p>Beauty for everyone — get premium services without breaking your wallet.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Satisfaction</h3>
+        <p>We have 98% 5-star reviews from our happy customers.</p>
       </div>
     </div>
   </section>
@@ -59,9 +83,28 @@
     <h2>💖 Style Inspiration</h2>
     <div class="grid">
       <img src="https://i.pinimg.com/736x/5d/19/84/5d198489178db7b1177ad8a3dee8b8f1.jpg" alt="Bridal Look">
-      <img src="https://img.freepik.com/free-photo/face-beauty-mask-self-care_23-2148752541.jpg?t=st=1685586500~exp=1685587100~hmac=bdd835e102113924482e9c5de7248ccd52f8843d66f36814dbb672c4abf07238" alt="Facial">
-      <img src="https://tse1.explicit.bing.net/th/id/OIP.3Ka914ZywDcRpsCFv_-DSAHaLH?w=600&h=900&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pedicure">
+      <img src="https://img.freepik.com/free-photo/face-beauty-mask-self-care_23-2148752541.jpg" alt="Facial">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.3Ka914ZywDcRpsCFv_-DSAHaLH?w=600&h=900" alt="Pedicure">
       <img src="https://i.pinimg.com/736x/e2/9a/25/e29a253f18b5cadde42a06494fd5b636.jpg" alt="Hair Style">
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>💬 What Our Customers Say</h2>
+    <div class="grid">
+      <div class="card">
+        <p>“Absolutely loved my bridal look! Thanks to Infanite Beauty!”</p>
+        <strong>- Riya Sharma</strong>
+      </div>
+      <div class="card">
+        <p>“Tried their facial kit — glow lasted for weeks!”</p>
+        <strong>- Neha Patel</strong>
+      </div>
+      <div class="card">
+        <p>“Best salon experience in town. Super hygienic and friendly staff.”</p>
+        <strong>- Ayesha Khan</strong>
+      </div>
     </div>
   </section>
 
@@ -82,12 +125,20 @@
       <button type="submit">Place Order</button>
     </form>
 
-    <!-- Show success message -->
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         <p style="color: lightgreen; font-weight: bold;">{{ messages[0] }}</p>
       {% endif %}
     {% endwith %}
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+    <h2>📧 Subscribe for Glow Offers</h2>
+    <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
   <!-- Contact Section -->
@@ -97,6 +148,16 @@
     <p>📧 inf@nitebeauti.com</p>
     <p>📸 <a href="https://www.instagram.com/anshika_herbalbeautyparlour/" target="_blank" style="color:#ff69b4;">Follow on Instagram</a></p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Social Strip -->
+  <section id="social-strip">
+    <h2>🌐 Connect with Us</h2>
+    <div style="font-size: 1.5rem;">
+      <a href="https://instagram.com/anshika_herbalbeautyparlour" target="_blank" style="color:#ff69b4; margin: 0 10px;">Instagram</a> |
+      <a href="#" target="_blank" style="color:#ff69b4; margin: 0 10px;">YouTube</a> |
+      <a href="#" target="_blank" style="color:#ff69b4; margin: 0 10px;">Facebook</a>
+    </div>
   </section>
 
   <!-- Footer -->
