@@ -1,0 +1,1 @@
+function confirmOrder(e){ e.preventDefault(); alert('Order Placed!'); }
